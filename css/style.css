@@ -2,7 +2,7 @@ body {
     background-color: black;
     min-height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, #000000 0%, #ff0000 100%);
+    background: linear-gradient(to bottom, #000000 25%, #ff0000 75%);
     background-repeat: no-repeat;
     background-attachment: fixed; 
     color: #fff;
@@ -14,11 +14,12 @@ body {
 }
 
 #type_effect {
+    justify-content: center;  /* horizontal center */
+    align-items: center; 
     font-family: monospace;
     font-size: 2rem;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid black; /* cursor */
     width: fit-content;
     animation: blink 0.7s step-end infinite;
 }
