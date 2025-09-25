@@ -2,7 +2,7 @@ body { /* Apply a gradient background to the entire body */
     background-color: black;
     min-height: 100vh;
     margin: 0;
-    background: linear-gradient(to bottom, #000000 25%, #ff0000 75%);
+    background: linear-gradient(to bottom, #000000 100%, #ff0000 0%);
     background-repeat: no-repeat;
     background-attachment: fixed; 
     color: #fff;
@@ -10,7 +10,8 @@ body { /* Apply a gradient background to the entire body */
 
 #intro-header { /* Style for the intro header section */
     background-color: black;
-    padding: 80px;
+    padding-top: 80px;
+    padding-bottom: 20px;
     display: flex;
     justify-content: center; /* centers horizontally */
     align-items: center;     /* centers vertically */
@@ -22,6 +23,7 @@ body { /* Apply a gradient background to the entire body */
     white-space: nowrap;
     overflow: hidden;
     width: fit-content;
+    color: #39FF14;
 }
 /* Text container used by the script - characters are injected into #type_text */
 #type_text {
@@ -32,17 +34,35 @@ body { /* Apply a gradient background to the entire body */
 .cursor {
     display: inline-block;
     width: 0.6ch; /* caret width roughly one character */
-    color: #fff;
+    color: #39FF14;
     margin-left: 4px;
     /* blink by toggling opacity */
-    animation: blink 0.8s steps(1, end) infinite;
+    animation: blink 0.4s steps(1, end) infinite;
 }
 
-@keyframes blink {
-    50% { opacity: 0; }
-}
 .nav-links {
     list-style-type: none;
     padding: 0;
-    
+    display: flex;
+    justify-content: center; /* center horizontally */
+    gap: 50px;               /* spacing between links */
+    font-family: monospace;
+    font-size: 20px;
 }
+
+.nav-links a {
+    text-decoration: none;
+
+}
+.nav-links a:link {
+    color: #39FF14;       /* normal unvisited link */
+}
+
+.nav-links a:visited {
+    color: white;   /* after user has clicked */
+}
+
+.nav-links a:hover {
+  color: darkgreen;       /* when mouse hovers */
+}
+
