@@ -11,6 +11,9 @@ body { /* Apply a gradient background to the entire body */
 #intro-header { /* Style for the intro header section */
     background-color: black;
     padding: 80px;
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    align-items: center;     /* centers vertically */
 }
 
 #type_effect { /* Style for the typewriter effect */
@@ -19,15 +22,25 @@ body { /* Apply a gradient background to the entire body */
     white-space: nowrap;
     overflow: hidden;
     width: fit-content;
-    animation: blink 0.7s step-end infinite;
+}
+/* Text container used by the script - characters are injected into #type_text */
+#type_text {
+    display: inline;
 }
 
-.intro {
-    font-size: 12px;
-    font-family: serif;
-    text-align: center;
+/* Visual caret that blinks. Attach this to an element placed after the typed text. */
+.cursor {
+    display: inline-block;
+    width: 0.6ch; /* caret width roughly one character */
+    color: #fff;
+    margin-left: 4px;
+    /* blink by toggling opacity */
+    animation: blink 0.8s steps(1, end) infinite;
 }
 
+@keyframes blink {
+    50% { opacity: 0; }
+}
 .nav-links {
     list-style-type: none;
     padding: 0;
