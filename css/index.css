@@ -61,6 +61,7 @@ body { /* Apply a gradient background to the entire body */
 
 .nav-links a:visited {
     color: #39FF14;   /* after user has clicked */
+    text-decoration: none;
 }
 
 .nav-links a:hover {

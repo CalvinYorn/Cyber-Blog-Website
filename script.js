@@ -22,4 +22,4 @@ function typeEffect() {
 // start typing when page loads
 window.onload = typeEffect;
 
- 
+//reset link color after page reload
