@@ -16,7 +16,7 @@ function typeEffect() {
             typingElement.textContent = "";
             index = 0;
             typeEffect();
-        }, 4000); // pause before restarting (4 seconds here)
+        }, 5000); // pause before restarting (4 seconds here)
     }
 }
 // start typing when page loads

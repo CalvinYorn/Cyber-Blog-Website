@@ -19,7 +19,7 @@ body { /* Apply a gradient background to the entire body */
 
 #type_effect { /* Style for the typewriter effect */
     font-family: monospace;
-    font-size: 2rem;
+    font-size: 3rem;
     white-space: nowrap;
     overflow: hidden;
     width: fit-content;
@@ -30,7 +30,7 @@ body { /* Apply a gradient background to the entire body */
     display: inline;
 }
 
-/* Visual caret that blinks. Attach this to an element placed after the typed text. */
+/* Visual caret that blinks */
 .cursor {
     display: inline-block;
     width: 0.6ch; /* caret width roughly one character */
@@ -39,6 +39,7 @@ body { /* Apply a gradient background to the entire body */
     /* blink by toggling opacity */
     animation: blink 0.4s steps(1, end) infinite;
 }
+
 
 .nav-links {
     list-style-type: none;
@@ -55,14 +56,48 @@ body { /* Apply a gradient background to the entire body */
 
 }
 .nav-links a:link {
-    color: #39FF14;       /* normal unvisited link */
+    color:white;       /* normal unvisited link */
 }
 
 .nav-links a:visited {
-    color: white;   /* after user has clicked */
+    color: #39FF14;   /* after user has clicked */
 }
 
 .nav-links a:hover {
-  color: darkgreen;       /* when mouse hovers */
+    color: darkgreen;       /* when mouse hovers */
 }
 
+#abt_container {
+    background-color: #0d1f0d;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: monospace;
+    color: #39FF14;
+
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+    flex-direction: column; 
+}
+
+#abt_container h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#abt_container p {
+    line-height: 1.5;
+    text-align: center;
+    font-size: 16px;
+}
+
+#abt_container img {
+    width: 300px;
+    height: 250px;
+    display: flex;
+
+}
