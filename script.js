@@ -1,4 +1,4 @@
-const text = "Welcome to My Cybersecurity Blog";  //header
+const text = "Welcome to My Cybersecurity Blog";  //header effect
 const typingElement = document.getElementById("type_effect"); // grabs id from html
 
 let index = 0; // current character index
@@ -14,3 +14,6 @@ function typeEffect() {
 
 // Start typing when page loads
 window.onload = typeEffect;
+
+
+//

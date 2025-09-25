@@ -1,4 +1,4 @@
-body {
+body { /* Apply a gradient background to the entire body */
     background-color: black;
     min-height: 100vh;
     margin: 0;
@@ -8,27 +8,18 @@ body {
     color: #fff;
 }
 
-#intro-header {
+#intro-header { /* Style for the intro header section */
     background-color: black;
     padding: 80px;
 }
 
-#type_effect {
-    justify-content: center;  /* horizontal center */
-    align-items: center; 
+#type_effect { /* Style for the typewriter effect */
     font-family: monospace;
     font-size: 2rem;
     white-space: nowrap;
     overflow: hidden;
     width: fit-content;
     animation: blink 0.7s step-end infinite;
-}
-
-h1{
-    font-weight: bold;
-    font-family: serif;
-    text-align: center;
-
 }
 
 .intro {
