@@ -1,4 +1,4 @@
-Personal Project: Cyber Blog Website
+Personal Project: Cyber Blog Website (IN PROGRESS)
 By Calvin Yorn
 
 Why:
