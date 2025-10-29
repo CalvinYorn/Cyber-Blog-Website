@@ -1,87 +1,107 @@
-body { /* Apply a gradient background to the entire body */
-    background-color: black;
-    min-height: 100vh;
-    margin: 0;
-    background: linear-gradient(to bottom, #000000 100%, #ff0000 0%);
-    background-repeat: no-repeat;
-    background-attachment: fixed; 
-    color: #fff;
+body {
+  background: linear-gradient(-45deg, #000000, #001a0d, #000000);
+  background-size: 400% 400%;
+  animation: gradient 20s ease infinite;
+  margin: 0;
+  min-height: 100vh; /* ensures the background covers viewport */
+  overflow-x: hidden; /* optional: hide horizontal scroll */
 }
 
-#intro-header { /* Style for the intro header section */
-    background-color: black;
-    padding-top: 80px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: center; /* centers horizontally */
-    align-items: center;     /* centers vertically */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 #type_effect { /* Style for the typewriter effect */
-    font-family: monospace;
+    font-family: 'Ubuntu Mono', monospace;
     font-size: 3rem;
     white-space: nowrap;
     overflow: hidden;
     width: fit-content;
-    color: #39FF14;
+    color: #ffffff;
 }
 /* Text container used by the script - characters are injected into #type_text */
 #type_text {
     display: inline;
+    font-family: 'Ubuntu Mono', monospace;
 }
 
 /* Visual caret that blinks */
 .cursor {
     display: inline-block;
+    font-family: 'Ubuntu Mono', monospace;
     width: 0.6ch; /* caret width roughly one character */
-    color: #39FF14;
+    color: #ffffff;
     margin-left: 4px;
     /* blink by toggling opacity */
     animation: blink 0.4s steps(1, end) infinite;
 }
 
 
+/* Navigation list */
 .nav-links {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* center horizontally */
-    gap: 50px;               /* spacing between links */
-    font-family: monospace;
-    font-size: 20px;
+  list-style: none;
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* align vertically */
+  gap: 50px;                 /* spacing between items */
+  font-family: monospace;
+  font-size: 20px;
+  margin: 0;
+  padding: 20px 0;
+  background: transparent;
+  margin-left: 200px;
+}
+
+.name_tag {
+    margin-right: 500px;
+    font-weight: bold;
+    font-size: 22px;
+    color: #00ff88;
+    letter-spacing: 1px;
 }
 
 .nav-links a {
-    text-decoration: none;
-
-}
-.nav-links a:link {
-    color:white;       /* normal unvisited link */
-}
-
-.nav-links a:visited {
-    color: #39FF14;   /* after user has clicked */
-    text-decoration: none;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: darkgreen;       /* when mouse hovers */
+  color: #00ff88;
 }
 
+
 #abt_container {
-    background-color: #0d1f0d;
+    background-color: #ffffff;
     margin: 40px auto;
     padding: 20px;
     max-width: 800px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     font-family: monospace;
-    color: #39FF14;
+    color: #000000;
 
     display: flex;
     justify-content: center; /* horizontal */
     align-items: center;     /* vertical */
     flex-direction: column; 
+
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    animation-delay: 9s; /* wait 3 seconds before starting */
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 #abt_container h2 {
@@ -97,9 +117,50 @@ body { /* Apply a gradient background to the entire body */
 }
 
 #abt_container img {
-    width: 300px;
-    height: 250px;
-    display: flex;
-
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+
+
+#console {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 2.5rem; /* bigger font */
+  color: #00ff88;
+  background: transparent;
+  padding: 10px;
+  width: max-content;
+  margin: 5px auto;
+  line-height: 1.6;
+  white-space: pre;
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.6ch;
+  margin-left: 4px;
+  animation: blink 0.6s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.access {
+  font-weight: 700;
+  text-shadow: 0 0 12px rgba(0,255,136,0.5);
+  color: #00ff88;
+  transform: scale(0.95);
+  opacity: 0;
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+/* cursor blink */
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
